@@ -9,7 +9,7 @@
   "author": "Atanas Vihrogonov <Vihrogonov@protonmail.com>",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.16.4",
     "hbs": "^4.1.1"
   }
 }
