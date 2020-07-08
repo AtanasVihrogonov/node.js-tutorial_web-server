@@ -20,7 +20,7 @@ app.use(express.static(publicDirectoryPath));
 app.get('', (req, res) => {
   res.render('index', {
     title: 'Weather',
-    name: 'Atanas V'
+    name: 'Atanas Vihrogonov'
   });
 });
 
@@ -44,6 +44,22 @@ app.get('/weather', (req, res) => {
     forcast: '50 degree',
     location: 'London'
   })
+});
+
+app.get('/help/*', (req, res) => {
+  res.render('404', {
+    title: '404 help',
+    name: 'Atanas Vihrogonov',
+    errorMessage: 'Help article not found!'
+  });
+});
+
+app.get('*', (req, res) => {
+  res.render('404', {
+    title: '404',
+    name: 'Atanas Vihrogonov',
+    errorMessage: 'Page not found!'
+  });
 });
 
 app.listen(3000, () => {
